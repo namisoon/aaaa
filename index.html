@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>TransBit</title>
+    <meta name="description" content=" Partners">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+
+    <!-- [top] --><!--{{{-->
+    <div id="top">
+      <img src="images/logo.png">
+      <div id="top__attention">
+        <div>本ソフトをご利用頂くにあたり<br>下記の内容を十分にご理解下さいます様お願い申し上げます。</div>
+        <ul>
+          <li>①本ソフトは、ご利用頂く方の利益を確約するものではありません。</li>
+          <li>②ご使用状況の通信状況、使用機材の性能により処理速度に遅れが発生する場合があります。</li>
+          <li>③ソフト使用上で行う各取引所への登録はご自身の責任で行って下さい。</li>
+          <li>④仮想通貨市場の値動きにより各取引所の値段の開きが少なく利益が出ない場合があります。</li>
+          <li>⑤ソフトの改ざんや不正な解析によって生じたエラーは回収・修復対応致しかねます。</li>
+          <li>⑥過度の金額使用によって生じた負債等に関して一切の責任は当社は請け負いません。</li>
+          <li>⑦本ソフトの仕様に関する責任は全てお客様（ご利用者）にありますのでご理解ください。</li>
+          <li>⑧本ソフトと連動する弊社管理のデータベースサーバへのハッキング等、運営上問題があると判明したお客様のソフトは勧告後に改善の余地が見られない場合は動作を中止させて頂きます。これにより生じた一切の問題に関し弊社はその責任を負いませんのでご了承ください。</li>
+        </ul>
+      </div>
+
+      <div id="top__login">
+        <div>上記の項目をご理解頂き下記からログインして下さい。<br>なお、これにより弊社からの注意事項を十分理解されたこととします。</div>
+        <input type="text" placeholder="メールアドレス">
+        <input type="password" placeholder="パスワード">
+        <input class="btn_start" type="submit" value="START">
+      </div>
+
+    </div><!-- //top -->
+    <!--}}}-->
+
+    <!-- [dashboard] --><!--{{{-->
+    <div id="dashboard">
+
+      <div id="dashboard__left">
+        <img src="images/logo.png">
+
+        <div class="dashboard_table">
+          <table id="dashboard__left__list">
+            <thead>
+              <tr>
+                <th>MARKET</th>
+                <th>COUNTRY</th>
+                <th>BID(BTC)/1ETH</th>
+                <th>ASK(BTC)/1ETH</th>
+                <th>BALANCE(BTC)</th>
+                <th>BALANCE(ETH)</th>
+              </tr>
+
+              <!-- <!-- Javascript でレンダリングする部分 (個数は20前後の予定) -->
+              <tr class="market_binance"><td>binance</td><td>CHN</td><td class="bid_binance">0.0711000000</td><td class="ask_binance">0.0711390000</td><td class="btc_binance" style="background: rgba(255, 29, 37, 0);">-</td><td class="eth_binance" style="background: rgba(255, 29, 37, 0);">-</td></tr>
+              -->
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+
+      <div id="dashboard__right">
+
+        <!-- 上 -->
+        <div id="dashboard__right__upper">
+
+          <!-- CHART -->
+          <div id="dashboard__right__upper__chart">
+            <h1>CHART</h1>
+
+          </div>
+
+          <!-- HISTORY -->
+          <div id="dashboard__right__upper__history">
+            <h1>HISTORY</h1>
+            <ul>
+            </ul>
+          </div>
+
+        </div><!-- //dashboard__right__upper -->
+
+        <!-- 下 -->
+        <div id="dashboard__right__bottom">
+
+          <!-- TRADE -->
+          <div id="dashboard__right__bottom__trade">
+
+            <div id="dashboard__right__bottom__trade__max-bid">
+              <div>MAX BID</div>
+              <div>
+                <span class="best_bid_name"></span>
+                <span class="best_bid_price"></span>
+                <span>BTC</span>
+              </div>
+            </div>
+
+            <div id="dashboard__right__bottom__trade__nub-ask">
+              <div>MIN ASK</div>
+              <div>
+                <span class="best_ask_name"></span>
+                <span class="best_ask_price"></span>
+                <span>BTC</span>
+              </div>
+            </div>
+
+            <div id="dashboard__right__bottom__trade__gap-eth-gap-percent">
+              <div>GAP ETH</div>
+              <div><span class="price_diff"></span><span>BTC</span></div>
+              <div>GAP PERCENT</div>
+              <div><span class="diff_percent"></span><span>％</span></div>
+            </div>
+
+            <div id="dashboard__right__bottom__trade__trade-eth-amount">
+              <div id="dashboard__right__bottom__trade__trade-eth-amount__head">
+                <div>TRADE ETH AMOUNT</div>
+                <div><span class="base_lot"></span><span>ETH</span></div>
+              </div>
+              <ul>
+                <li>
+                  <div>10</div>
+                  <div>
+                    <button class="count_up p10"></button>
+                    <button class="count_down m10"></button>
+                  </div>
+                </li>
+                <li>
+                  <div>1</div>
+                  <div>
+                    <button class="count_up p1">▲</button>
+                    <button class="count_down m1">▼</button>
+                  </div>
+                </li>
+                <li>
+                  <div>0.1</div>
+                  <div>
+                    <button class="count_up p01">▲</button>
+                    <button class="count_down m01">▼</button>
+                  </div>
+                </li>
+                <li>
+                  <div>0.01</div>
+                  <div>
+                    <button class="count_up p001">▲</button>
+                    <button class="count_down m001">▼</button>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div id="dashboard__right__bottom__trade__trade-btc-amount">
+              <div>ESTIMATED PROFIT</div>
+              <div><span class="procit_by_quote"></span><span>BTC</span></div>
+            </div>
+
+            <div id="dashboard__right__bottom__trade__button">
+              <button class="reload">RELOAD</button>
+              <button class="trade">TRADE</button>
+            </div>
+
+          </div>
+
+          <!-- MESSAGE -->
+          <div id="dashboard__right__bottom__message">
+            <h1>MESSAGE</h1>
+            <ul class="messages">
+            </ul>
+          </div>
+
+        </div><!-- //dashboard__right__bottom -->
+
+      </div><!-- dashboard__right -->
+
+    </div><!--}}}-->
+
+    <!-- [setting] --><!--{{{-->
+    <div id="setting">
+
+      <header id="setting__header">
+        <img src="images/logo.png">
+        <div>
+          <button class="set_apis">SAVE</button>
+          <button class="goto_dashboard">DASHBOARD</button>
+        </div>
+      </header>
+
+      <table id="setting__list" class="setting_table">
+        <thead>
+          <tr>
+            <th>MARKET</th><th>COUNTRY</th><th>API KEY</th><th>SECRET KEY</th><th>USER ID</th>
+          </tr>
+
+          <!--
+            <!-- Javascript でレンダリングする部分 (個数は20前後の予定) -->
+            <tr><td>binance</td><td>CHN</td><td><input class="key_binance" type="text" value=""></td><td><input class="secret_binance" type="text" value=""></td><td><input type="text" disabled="disabled" value="-" style="text-align: center;"></td></tr>
+          -->
+
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+
+    </div><!-- //setting -->
+
+
+    <!--}}}-->
+
+    <script type="text/javascript" src="./js/main.js"></script>
+
+  </body>
+</html>
